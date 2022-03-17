@@ -1,0 +1,38 @@
+{
+    "name": "finna/finna",
+    "description": "Boilerplate WordPress theme with Tailwind CSS.",
+    "homepage": "https://github.com/FinnaCreate/finna",
+    "license": "GPL-3.0",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "FinnaCreate",
+            "email": "finnacreate@gmail.com",
+            "homepage": "https://finnacreate.com",
+            "role": "Developer"
+        }
+    ],
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "php-parallel-lint/php-parallel-lint": "^1.2",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "wp-coding-standards/wpcs": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Finna\\": "./inc"
+        },
+        "files": [
+            "./inc/Helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": [
+            "@phpcs",
+            "@parallel-lint"
+        ],
+        "phpcs": "phpcs",
+        "parallel-lint": "parallel-lint --blame --exclude vendor/ ."
+    }
+}

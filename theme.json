@@ -1,0 +1,73 @@
+{
+    "$schema": "http://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "settings": {
+        "layout": {
+            "contentSize": "960px",
+            "wideSize": "1280px"
+        },
+        "color": {
+            "palette": [
+                {
+                    "name": "Background",
+                    "slug": "background",
+                    "color": "#1F2937"
+                },
+                {
+                    "name": "Foreground",
+                    "slug": "foreground",
+                    "color": "#F9FAFB"
+                },
+                {
+                    "name": "Primary",
+                    "slug": "primary",
+                    "color": "#0EA5E9"
+                },
+                {
+                    "name": "Secondary",
+                    "slug": "secondary",
+                    "color": "#14B8A6"
+                },
+                {
+                    "slug": "tertiary",
+                    "color": "#F6F6F6",
+                    "name": "Tertiary"
+                }
+            ]
+        },
+        "typography": {
+            "fontSizes": [
+                {
+                    "name": "Small",
+                    "slug": "small",
+                    "size": "0.875rem"
+                },
+                {
+                    "slug": "regular",
+                    "name": "Regular",
+                    "size": "1.5rem"
+                },
+                {
+                    "slug": "large",
+                    "name": "Large",
+                    "size": "1.125rem"
+                },
+                {
+                    "slug": "xl",
+                    "name": "XL",
+                    "size": "1.25rem"
+                },
+                {
+                    "slug": "xxl",
+                    "name": "2XL",
+                    "size": "1.5rem"
+                },
+                {
+                    "slug": "xxxl",
+                    "name": "3XL",
+                    "size": "1.875rem"
+                }
+            ]
+        }
+    }
+}
