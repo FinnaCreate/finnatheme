@@ -20,19 +20,11 @@ final class Init
     public static function get_services()
     {
         return [
-            Core\Tags::class,
-            Core\Sidebar::class,
             Setup\Setup::class,
             Setup\Menus::class,
             Setup\Enqueue::class,
-            // Custom\PostTypes::class,
-            Custom\Admin::class,
-            Custom\Extras::class,
             Api\Customizer::class,
-            // Api\Gutenberg::class,
-            // Api\Widgets\TextWidget::class,
-            Plugins\ThemeJetpack::class,
-            Plugins\Acf::class
+            Widgets\Sidebar::class,
         ];
     }
 

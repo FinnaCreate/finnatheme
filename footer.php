@@ -14,6 +14,15 @@
     <div class="container mx-auto text-center text-gray-500">
         &copy; <?php echo date_i18n('Y'); ?> - <?php echo get_bloginfo('name'); ?>
     </div>
+    <div class="container mx-auto text-center text-gray-500">
+        <?php
+        printf(
+            '<a href="%s">%s</a>',
+            esc_url(__('https://github.com/FinnaCreate/finnatheme', 'finna')),
+            esc_html(Finna\Api\Customizer::text('finna_footer_copy_text'))
+        );
+        ?>
+    </div>
 </footer>
 
 </div>

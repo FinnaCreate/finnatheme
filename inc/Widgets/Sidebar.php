@@ -1,6 +1,6 @@
 <?php
 
-namespace Finna\Core;
+namespace Finna\Widgets;
 
 /**
  * Sidebar.

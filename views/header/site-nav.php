@@ -71,9 +71,6 @@ $menuSocialIcons = '<svg class="w-16 h-16 text-blue-600 fill-current"
             'submenu_class'   => 'z-50 text-sm hidden transform bg-white leading-loose group-hover:block lg:bg-gray-100 lg:shadow-behind lg:p-6 lg:text-left lg:text-base lg:shadow-lg lg:hidden lg:absolute lg:top-12 lg:w-48 lg:max-w-3xl lg:rounded',
 
             'fallback_cb'     => false,
-
-            // Custom walker
-            // 'walker'          => new Finna_Nav_Menu_Walker()
         ]);
         ?>
 

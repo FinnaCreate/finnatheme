@@ -24,20 +24,22 @@ class Footer
      */
     public function register($wp_customize)
     {
-        $wp_customize->add_section('awps_footer_section', [
+        $wp_customize->add_section('finna_footer_section', [
             'title' => __('Footer', 'finna'),
-            'description' => __('Customize the Footer'),
+            'description' => __('Customize the Footer', 'finna'),
             'priority' => 162
         ]);
 
         $wp_customize->add_setting('finna_footer_background_color', [
             'default' => '#ffffff',
             'transport' => 'postMessage', // or refresh if you want the entire page to reload
+            'sanitize_callback'  => 'esc_attr',
         ]);
 
         $wp_customize->add_setting('finna_footer_copy_text', [
             'default' => 'Proudly powered by Finna',
             'transport' => 'postMessage', // or refresh if you want the entire page to reload
+            'sanitize_callback'  => 'esc_attr',
         ]);
 
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'finna_footer_background_color', [
@@ -73,7 +75,7 @@ class Footer
     public function outputCss()
     {
         echo '<style type="text/css">';
-        echo Customizer::css('.site-footer', 'background-color', 'awps_footer_background_color');
+        echo Customizer::css('.site-footer', 'background-color', 'finna_footer_background_color');
         echo '</style>';
     }
 
@@ -82,6 +84,6 @@ class Footer
      */
     public function outputText()
     {
-        echo Customizer::text('awps_footer_copy_text');
+        echo Customizer::text('finna_footer_copy_text');
     }
 }

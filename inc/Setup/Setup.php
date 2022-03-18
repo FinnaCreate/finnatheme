@@ -69,6 +69,11 @@ class Setup
             ]
         );
 
+        add_theme_support('custom-background', apply_filters('finna_custom_background_args', array(
+            'default-color' => 'ffffff',
+            'default-image' => '',
+        )));
+
         /*
         * Add support for core custom logo.
         *

@@ -1,10 +1,4 @@
 <?php
-// Load the template functions.
-// require get_template_directory() . '/classes/class-finna-nav-menu-walker.php';
-// require get_template_directory() . '/inc/template-functions/header-functions.php';
-// require get_template_directory() . '/inc/template-functions/nav-functions.php';
-// require get_template_directory() . '/inc/template-functions/widget-functions.php';
-
 
 /**
  *

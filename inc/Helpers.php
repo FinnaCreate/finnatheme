@@ -72,7 +72,7 @@ if (!function_exists('cache_bust')) {
 
 if (!function_exists('assets')) {
     /**
-     * Easily point to the assets dist folder.
+     * Easily point to the assets folder.
      *
      * @param  string  $path
      */
@@ -82,7 +82,7 @@ if (!function_exists('assets')) {
             return;
         }
 
-        echo get_template_directory_uri() . '/assets/' . $path;
+        echo esc_url(get_template_directory_uri()) . '/assets/' . $path;
     }
 }
 

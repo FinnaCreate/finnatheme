@@ -24,13 +24,14 @@ class Sidebar
     {
         $wp_customize->add_section('finna_sidebar_section', [
             'title' => __('Sidebar', 'finna'),
-            'description' => __('Customize the Sidebar'),
+            'description' => __('Customize the Sidebar', 'finna'),
             'priority' => 161
         ]);
 
         $wp_customize->add_setting('finna_sidebar_background_color', [
             'default' => '#ffffff',
             'transport' => 'postMessage', // or refresh if you want the entire page to reload
+            'sanitize_callback'  => 'esc_attr',
         ]);
 
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'finna_sidebar_background_color', array(

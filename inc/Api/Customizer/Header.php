@@ -24,23 +24,26 @@ class Header
     {
         $wp_customize->add_section('finna_header_section', [
             'title' => __('Header', 'finna'),
-            'description' => __('Customize the Header'),
+            'description' => __('Customize the Header', 'finna'),
             'priority' => 35
         ]);
 
         $wp_customize->add_setting('finna_header_background_color', [
             'default' => '#ffffff',
             'transport' => 'postMessage', // or refresh if you want the entire page to reload
+            'sanitize_callback'  => 'esc_attr',
         ]);
 
         $wp_customize->add_setting('finna_header_text_color', [
             'default' => '#333333',
             'transport' => 'postMessage', // or refresh if you want the entire page to reload
+            'sanitize_callback'  => 'esc_attr',
         ]);
 
         $wp_customize->add_setting('finna_header_link_color', [
             'default' => '#004888',
             'transport' => 'postMessage', // or refresh if you want the entire page to reload
+            'sanitize_callback'  => 'esc_attr',
         ]);
 
         $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'finna_header_background_color', [
