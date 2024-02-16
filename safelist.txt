@@ -6,3 +6,5 @@ alignright
 wp-block-button
 wp-caption
 wp-caption-text
+text-blue-500
+text-gray-600

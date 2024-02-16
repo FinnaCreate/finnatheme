@@ -1,6 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const theme = require('./theme.json')
-const finna = require('./resources/scripts/index')
+const finna = require('./src/scripts/index')
 
 module.exports = {
     content: [
@@ -9,9 +9,10 @@ module.exports = {
         './assets/svg/**/*.php',
         './classes/**/*.php',
         './inc/**/*.php',
-        './inc/**/*.php',
         './page-templates/**/*.php',
-        './resources/scripts/*.js',
+        './safelist.txt',
+        './src/scripts/*.ts',
+        './src/scripts/*.js',
         './template-parts/**/*.php',
         './templates/**/*.php',
         './views/**/*.php'

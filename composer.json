@@ -22,10 +22,7 @@
     "autoload": {
         "psr-4": {
             "Finna\\": "./inc"
-        },
-        "files": [
-            "./inc/Helpers.php"
-        ]
+        }
     },
     "scripts": {
         "test": [
@@ -34,5 +31,10 @@
         ],
         "phpcs": "phpcs",
         "parallel-lint": "parallel-lint --blame --exclude vendor/ ."
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

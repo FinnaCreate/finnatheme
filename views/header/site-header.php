@@ -12,6 +12,7 @@
 <header>
 
     <div>
-        <?php get_template_part('views/header/site-nav'); ?>
+        <?php get_template_part('views/header/site-nav');
+        ?>
     </div>
 </header>

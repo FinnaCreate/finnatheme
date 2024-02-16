@@ -15,11 +15,20 @@ if (!function_exists('dd')) {
      */
     function dd()
     {
-        echo '<pre>';
-        array_map(function ($x) {
-            var_dump($x);
-        }, func_get_args());
-        echo '</pre>';
+        // echo '<pre>';
+        // array_map(function ($x) {
+        //     var_dump($x);
+        // }, func_get_args());
+        // echo '</pre>';
+        // die;
+
+        $output = '';
+
+        foreach (func_get_args() as $arg) {
+            $output .= print_r($arg, true);
+        }
+
+        echo '<pre>' . $output . '</pre>';
         die;
     }
 }
@@ -43,30 +52,19 @@ if (!function_exists('starts_with')) {
     }
 }
 
-if (!function_exists('cache_bust')) {
+if (!function_exists('src')) {
     /**
-     * Get the path to a versioned Mix file.
+     * Easily point to the src folder.
      *
      * @param  string  $path
-     * @param  string  $manifestDirectory
-     * @return \Illuminate\Support\HtmlString
-     *
-     * @throws \Exception
      */
-    /**
-     * Get asset path.
-     *
-     * @param string $path Path to asset.
-     *
-     * @return string
-     */
-    function cache_bust($path)
+    function src($path)
     {
-        if (wp_get_environment_type() === 'production') {
-            return get_stylesheet_directory_uri() . '/' . $path;
+        if (!$path) {
+            return;
         }
 
-        return add_query_arg('time', time(), get_stylesheet_directory_uri() . '/' . $path);
+        echo esc_url(get_template_directory_uri()) . '/src/' . $path;
     }
 }
 
